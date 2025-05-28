@@ -1,6 +1,6 @@
 # 🎙️ WhisperX + PyAnnote: Diarization and Transcription Pipeline
 
-🎯 **AudioTranscribeX** is an advanced **Voice-to-Text Transcription** app that seamlessly converts your audio files into text, using **OpenAI's Whisper Model** and **LLM-based summarization**. It supports multiple audio formats and provides speaker diarization (who spoke when) with the power of **WhisperX** and **PyAnnote**.
+🎯 **ASPER** is an advanced **Voice-to-Text Transcription** app that seamlessly converts your audio files into text, using **OpenAI's Whisper Model** and **LLM-based summarization**. It supports multiple audio formats and provides speaker diarization (who spoke when) with the power of **WhisperX** and **PyAnnote**.
 
 ---
 
