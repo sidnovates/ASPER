@@ -1,0 +1,29 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+uploads/
+
+# Node.js
+node_modules/
+dist/
+build/
+
+# Environment
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Ignore FFmpeg build files
+ffmpeg/
+ffmpeg-7.1.1-full_build/
+*.exe
+
+#Ignoring Audio_File
+Audio_File
+

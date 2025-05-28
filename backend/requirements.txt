@@ -1,0 +1,74 @@
+#To install all dependencies in virtual environment
+# RUN command in terminal: pip install -r requirements.txt 
+# Use python <=3.10.11
+
+# Core dependencies
+torch==2.7.0
+torchaudio==2.7.0
+transformers==4.52.3
+whisperx==3.3.4
+faster-whisper==1.1.1
+openai-whisper==20240930
+
+# PyAnnote (for diarization)
+pyannote.audio==3.3.2
+pyannote.core==5.0.0
+pyannote.database==5.1.3
+pyannote.metrics==3.2.1
+pyannote.pipeline==3.0.1
+
+# Hugging Face + Google AI dependencies
+huggingface-hub==0.32.1
+protobuf==5.29.4
+google-api-core==2.25.0rc1
+google-api-python-client==2.170.0
+google-auth==2.40.2
+google-auth-httplib2==0.2.0
+google-generativeai==0.8.5
+google-ai-generativelanguage==0.6.15
+
+# Audio/ML tools
+asteroid-filterbanks==0.4.0
+ctranslate2==4.4.0
+soundfile==0.13.1
+scipy==1.15.3
+numpy==2.2.6
+sentencepiece==0.2.0
+pytorch-lightning==2.5.1.post0
+lightning-utilities==0.14.3
+pytorch-metric-learning==2.8.1
+
+# FastAPI + Web
+fastapi==0.115.12
+uvicorn==0.34.2
+
+# Utils and others
+joblib==1.5.1
+tqdm==4.67.1
+requests==2.32.3
+typing_extensions==4.13.2
+PyYAML==6.0.2
+rich==14.0.0
+coloredlogs==15.0.1
+colorlog==6.9.0
+
+# Visualization (optional)
+matplotlib==3.10.3
+
+# Data handling
+pandas==2.2.3
+
+# For compatibility
+packaging==24.2
+protobuf==5.29.4
+filelock==3.18.0
+
+# For compatibility
+python-multipart==0.0.20
+
+#Loading .env files
+python-dotenv==1.1.0
+
+
+
+
