@@ -107,5 +107,14 @@ Access the app at: [http://localhost:3000](http://localhost:3000)
 
 ---
 
+## 🌟 Wrapping Up
+
+```
+🎧 AudioTranscribeX: Your voice, our code!
+🗣️ Making conversations clearer, one transcript at a time.
+🤖 Powered by AI magic and Open Source love.
+```
+---
+
 
 
