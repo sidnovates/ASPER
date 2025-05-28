@@ -1,115 +1,111 @@
-🎙️ WhisperX + PyAnnote: Diarization and Transcription Pipeline
+# 🎙️ WhisperX + PyAnnote: Diarization and Transcription Pipeline
 
-Accurate speaker diarization + transcription for audio files, powered by OpenAI Whisper, WhisperX, and PyAnnote.
+🎯 **AudioTranscribeX** is an advanced **Voice-to-Text Transcription** app that seamlessly converts your audio files into text, using **OpenAI's Whisper Model** and **LLM-based summarization**. It supports multiple audio formats and provides speaker diarization (who spoke when) with the power of **WhisperX** and **PyAnnote**.
 
-📌 Features
-🎧 Audio Transcription with WhisperX for enhanced word-level timestamps.
+---
 
-🗣️ Speaker Diarization using PyAnnote for multi-speaker audio.
+## 📌 Features
 
-⏰ Precise start and end timestamps for each word.
+- 🎧 Upload audio files (`.mp3`, `.wav`, `.m4a`, `.aac`, `.flac`, etc.)
+- 🔍 Get accurate transcriptions with **Whisper** models
+- 🗣️ Speaker Diarization: Know *who* said *what* and *when*
+- 📑 Summarize long audio recordings using **LLM APIs** (e.g., Gemini/ChatGPT)
+- 🧱 FastAPI Backend + React Frontend
+- 🔥 Extensible and ready for further improvements
 
-🏗️ Scalable and modular code structure.
+---
 
-🚀 Ready for API integration and batch processing.
+## 🚀 Project Structure
 
-💾 Supports .wav, .mp3, and other audio formats.
+```
+/backend
+  |-- main.py             # FastAPI main app
+  |-- transcriber.py      # WhisperX transcription logic
+  |-- summarizer.py       # LLM summarization module
+  |-- requirements.txt    # Backend dependencies
 
-🛠️ Installation
-Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-Install dependencies
-bash
-Copy
-Edit
+/frontend
+  |-- src/                # React frontend (file upload, progress bar)
+  |-- public/             # Static assets
+  |-- package.json        # Frontend dependencies
+
+/venv                     # Virtual environment (excluded in .gitignore)
+```
+
+---
+
+## 🛠️ Installation
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/AudioTranscribeX.git
+cd AudioTranscribeX
+```
+
+### 2️⃣ Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Mac/Linux
+
 pip install -r requirements.txt
-Ensure you have ffmpeg installed (for audio processing):
+```
 
-bash
-Copy
-Edit
-# On Ubuntu
-sudo apt-get install ffmpeg
+✅ **Install FFmpeg** (Required for audio processing):
 
-# On MacOS (with brew)
-brew install ffmpeg
-🌐 API Usage (Optional)
-Set up your HuggingFace token and authentication:
+- Download FFmpeg: [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+- Extract and add `ffmpeg/bin` to your system PATH.
+- Verify:
+  ```bash
+  ffmpeg -version
+  ```
+  
+### 3️⃣ Frontend Setup
 
-bash
-Copy
-Edit
-export HF_TOKEN="your_huggingface_token"
-Then run the script:
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
 
-bash
-Copy
-Edit
-python main.py --input your_audio_file.wav --output transcript.json
-📦 File Structure
-bash
-Copy
-Edit
-project/
-├── main.py               # Main driver script
-├── utils/
-│   ├── diarization.py    # Diarization logic (PyAnnote)
-│   ├── transcription.py  # WhisperX transcription logic
-│   ├── formatters.py     # Helper functions for JSON formatting
-├── requirements.txt
-└── README.md
-💻 Example Output
-json
-Copy
-Edit
-[
-  {
-    "speaker": "Speaker 1",
-    "words": [
-      {"word": "Hello", "start": 0.5, "end": 0.9},
-      {"word": "everyone", "start": 1.0, "end": 1.4}
-    ]
-  },
-  {
-    "speaker": "Speaker 2",
-    "words": [
-      {"word": "Good", "start": 1.5, "end": 1.8},
-      {"word": "morning", "start": 1.9, "end": 2.2}
-    ]
-  }
-]
-🖌️ TODO & Roadmap
- WhisperX transcription integration
+---
 
- PyAnnote diarization integration
+## 🎬 Running the Project
 
- JSON formatting of output
+### Backend (FastAPI):
+```bash
+cd backend
+uvicorn main:app --reload
+```
 
- Web interface for upload & processing
+### Frontend (React):
+```bash
+cd frontend
+npm run dev
+```
 
- Dockerize the project for easy deployment
+Access the app at: [http://localhost:3000](http://localhost:3000)
 
-✨ Acknowledgements
-WhisperX
+---
 
-PyAnnote
+## 📦 Dependencies
 
-HuggingFace
+- 🎙️ [OpenAI Whisper](https://github.com/openai/whisper)
+- 🗣️ [WhisperX](https://github.com/m-bain/whisperx)
+- 🎛️ [PyAnnote](https://github.com/pyannote/pyannote-audio)
+- 🔥 FastAPI, Uvicorn
+- 🌐 React.js, Axios
 
-📬 Contributing
-Pull requests, issues, and feature requests are welcome!
-Let's make this project even better together. 💪
+---
 
-📜 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## 📸 Screenshots
 
-🎨 Stickers & Vibes
+![image](https://github.com/user-attachments/assets/c403cd2c-17c8-4fbc-bba9-eb82d184816c)
+
+---
 
 
 
-Would you like me to generate a LICENSE file as well? 🚀
-Or if you'd like, I can generate a basic main.py structure with argument parsing and pipeline integration too! Let me know! 🎯
